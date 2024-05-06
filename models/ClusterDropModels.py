@@ -29,7 +29,7 @@ class ClusterDropV2(nn.Module):
 
     def sinkhorn_knopp(self, out):
         """
-        This part of codes borrows from https://github.com/facebookresearch/swav. Thanks a lot.
+        This part of codes borrows from https://github.com/facebookresearch/swav. Thanks very much.
         """
         Q = torch.exp(out / self.epsilon).t()
         B = Q.shape[1]  # number of samples to assign
